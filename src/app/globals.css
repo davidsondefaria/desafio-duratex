@@ -2,26 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply font-sans;
+  }
+  a {
+    @apply font-sans;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .container {
+    @apply mx-auto h-auto px-[15px] sm:w-[684px] md:w-[750px] lg:w-[970px] xl:w-[1170px];
+  }
+
+  .header-wrapper {
+    @apply w-full h-[70px] fixed z-[3] bg-blackDecor;
+  }
+
+  .header-menu {
+    @apply flex justify-end items-center h-[70px] relative;
+  }
+
+  .header-menu .search-field {
+    @apply absolute right-0 h-[40px] w-full bg-[#292728] top-2/4 transform -translate-y-2/4;
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  .header-menu .search-field input {
+    @apply relative w-full h-full py-0 px-[35px] text-goldDecor;
+    background: 0 0;
+    z-index: 1;
+  }
+  .header-menu .search-field button {
+    @apply absolute top-1/2 transform -translate-y-1/2 w-[35px] h-full;
+    z-index: 2;
+  }
+
+  .header-menu .search-field-hidden {
+    @apply w-[35px];
+    background: 0 0;
+  }
+  .header-menu .search-field-hidden input {
+    @apply bg-[#383637];
+    display: none;
+  }
+
+  .header-menu-option {
+    @apply flex items-center h-[70px] px-[16px] py-[2px]
+     text-goldDecor hover:text-[#f4f4f5] text-sm xl:text-base
+     uppercase cursor-pointer;
+  }
+
+  .header-menu-mobile {
+    @apply block fixed top-[70px] left-0 bg-blackDecor p-[16px] w-full mx-auto my-0;
+    transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    overflow: hidden;
+    z-index: 2;
+    height: calc(100vh - 70px);
+  }
+  .search-field {
+    @apply block h-[40px] my-0 mx-auto;
+  }
+  .header-menu-mobile .search-field input {
+    @apply w-full relative h-[40px] font-sans placeholder-goldDecor bg-[#383637] mb-[10px] py-0 pr-[35px] pl-[10px];
+  }
+  .header-menu-mobile .search-field button {
+    @apply absolute w-[35px] h-[40px] right-0;
+  }
+  .header-menu-mobile .header-menu-option {
+    @apply font-sans text-base py-[2px] px-[5px];
+  }
+}
+
+@layer utilities {
+  .separator {
+    width: 1px;
+    height: 20px;
+    background-color: #dbc79a;
+    border: none;
+  }
 }
