@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-sans;
+    @apply font-sans bg-[#f4f4f5];
   }
   a {
     @apply font-sans;
@@ -13,17 +13,15 @@
 
 @layer components {
   .container {
-    @apply mx-auto h-auto px-[15px] sm:w-[684px] md:w-[750px] lg:w-[970px] xl:w-[1170px];
+    @apply mx-auto h-auto sm:w-[684px] md:w-[750px] lg:w-[970px] xl:w-[1170px];
   }
 
   .header-wrapper {
     @apply w-full h-[70px] fixed z-[3] bg-blackDecor;
   }
-
   .header-menu {
     @apply flex justify-end items-center h-[70px] relative;
   }
-
   .header-menu .search-field {
     @apply absolute right-0 h-[40px] w-full bg-[#292728] top-2/4 transform -translate-y-2/4;
     transition: all 0.5s ease;
@@ -72,6 +70,35 @@
   }
   .header-menu-mobile .header-menu-option {
     @apply font-sans text-base py-[2px] px-[5px];
+  }
+
+  /* Card section */
+  .list {
+    @apply gap-4 columns-1 sm:col-span-2 xl:columns-3 -mx-[15px];
+  }
+  .list .item {
+    @apply inline-block w-full mb-[10px] sm:mb-[15px];
+  }
+  .card {
+    @apply p-[20px] bg-white border-gray-200 shadow overflow-hidden relative;
+  }
+  .card .card-title {
+    @apply font-sans text-xl text-[#292728] font-bold my-2 py-2;
+  }
+  .card .card-description {
+    @apply font-sans font-normal text-base text-[#595959] mb-2;
+    letter-spacing: 1px;
+  }
+  .card .card-separator {
+    @apply mt-[10px] pt-3 border-t border-solid border-[#ccc];
+  }
+  .card button {
+    @apply block w-[140px] my-0 mx-auto py-[6px] px-[32px] 
+      text-sm text-[#292728] bg-goldDecor uppercase;
+    transition: all 0.5s ease;
+  }
+  .card button:hover {
+    @apply bg-[#c5b2a5];
   }
 }
 
