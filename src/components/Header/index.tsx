@@ -23,7 +23,9 @@ const Header: React.FC = () => {
           items-center
       `}
       >
-        <Image src="/logo-deca.svg" alt="Logo" width={70} height={70} />
+        <a href="/">
+          <Image src="/logo-deca.svg" alt="Logo" width={70} height={70} />
+        </a>
         <NavBar navButtons={navMockedButtons} />
       </div>
     </header>
