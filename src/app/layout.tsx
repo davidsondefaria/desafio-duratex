@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <div className="relative top-[70px]">{children}</div>
+        <main className="relative top-[70px]">{children}</main>
       </body>
     </html>
   );
