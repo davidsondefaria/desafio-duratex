@@ -90,7 +90,7 @@
 
   /* Card section */
   .list {
-    @apply gap-4 columns-1 sm:col-span-2 xl:columns-3;
+    @apply gap-4 columns-1 sm:columns-2 xl:columns-3;
   }
   .list .item {
     @apply inline-block w-full mb-[10px] sm:mb-[15px];
