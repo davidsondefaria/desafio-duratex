@@ -7,6 +7,9 @@
 }
 
 @layer base {
+  * {
+    @apply font-sans;
+  }
   body {
     @apply font-sans bg-[#f4f4f5];
   }
@@ -17,6 +20,9 @@
   h5,
   h6 {
     @apply font-sans py-[0.3em] my-[0.3em] leading-[1.2em];
+  }
+  a {
+    @apply font-sans;
   }
 }
 
@@ -57,7 +63,8 @@
 
   .header-menu-option {
     @apply flex items-center h-[70px] px-[16px] py-[2px]
-     text-goldDecor hover:text-[#f4f4f5] text-sm xl:text-base
+     text-goldDecor hover:text-[#f4f4f5]
+     text-sm xl:text-base font-light
      uppercase cursor-pointer;
   }
 
@@ -112,20 +119,21 @@
 
   /* Blog view section */
   .blog {
-    @apply block lg:flex lg:flex-row;
+    @apply block lg:flex lg:flex-row px-[-15px];
   }
   .blog article {
     @apply relative block 
       w-full 
-      sm:w-4/5 
+      sm:w-4/5 sm:mx-auto
       lg:w-3/4;
   }
   .blog .blog-post {
-    @apply py-[30px] pr-[20px];
+    @apply py-[30px] pr-[20px] lg:w-[70%] lg:mx-auto;
   }
   .blog .blog-post h1 {
     @apply my-[0.3em] py-[0.3em] 
-      text-[28px] leading-[33.6px] font-medium;
+      text-[28px] font-medium leading-[1.2em] 
+      md:text-[32px];
     color: #292728;
   }
   .blog p {
@@ -153,8 +161,8 @@
   }
   .blog aside .crop-image {
     @apply relative block overflow-hidden 
-      h-[100px] lg:h-[100px] min-w-[100px] w-[35%]
-      float-left mr-[20px];
+      h-[100px] md:h-[150px] min-w-[100px] w-[35%] md:w-full
+      float-left md:float-none mr-[20px];
   }
   .blog aside .crop-image img {
     @apply absolute top-1/2 w-full max-w-full -translate-y-1/2;

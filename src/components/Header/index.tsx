@@ -12,11 +12,16 @@ const navMockedButtons = [
   { title: "CONTATO", ref: "#contato" },
 ];
 
-const Header: React.FC = () => {
+const Header: React.FC<{ className: string }> = ({
+  className,
+}: {
+  className: string;
+}) => {
   return (
     <header className="header-wrapper">
       <div
         className={`
+          ${className}
           container
           flex
           justify-between
