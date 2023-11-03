@@ -6,8 +6,13 @@
   body {
     @apply font-sans bg-[#f4f4f5];
   }
-  a {
-    @apply font-sans;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans py-[0.3em] my-[0.3em] leading-[1.2em];
   }
 }
 
@@ -74,7 +79,7 @@
 
   /* Card section */
   .list {
-    @apply gap-4 columns-1 sm:col-span-2 xl:columns-3 -mx-[15px];
+    @apply gap-4 columns-1 sm:col-span-2 xl:columns-3;
   }
   .list .item {
     @apply inline-block w-full mb-[10px] sm:mb-[15px];
@@ -99,6 +104,56 @@
   }
   .card button:hover {
     @apply bg-[#c5b2a5];
+  }
+
+  /* Blog view section */
+  .blog {
+    @apply block lg:flex lg:flex-row mx-[15px];
+  }
+  .blog article {
+    @apply relative block 
+      w-full 
+      sm:w-4/5 
+      lg:w-3/4;
+  }
+  .blog .blog-post {
+    @apply py-[30px] pr-[20px];
+  }
+  .blog .blog-post h1 {
+    @apply my-[0.3em] py-[0.3em] 
+      font-sans text-[28px] leading-[33.6px] font-medium;
+    color: #292728;
+  }
+  .blog p {
+    @apply mb-[0.5em] py-[0.4em]
+      font-sans text-[#595959] font-normal leading-normal 
+      tracking-[1px] text-[16px];
+  }
+  .blog .blog-post a {
+    @apply text-[#00708a] font-bold;
+  }
+  .blog .blog-post blockquote {
+    @apply font-sans text-[#595959] font-normal leading-normal 
+      tracking-[1px] text-[16px]
+      py-[10px] px-[20px] mb-[20px]
+      border-l-[5px] border-solid border-[#eee];
+  }
+  .blog aside {
+    @apply relative w-full lg:w-1/4;
+  }
+  .blog aside .last-post {
+    @apply mb-[30px];
+  }
+  .blog aside h5 {
+    @apply font-sans font-medium text-[18.2px] text-[#00708a] pt-[6px];
+  }
+  .blog aside .crop-image {
+    @apply relative block overflow-hidden 
+      h-[100px] lg:h-[100px] min-w-[100px] w-[35%]
+      float-left mr-[20px];
+  }
+  .blog aside .crop-image img {
+    @apply absolute top-1/2 w-full max-w-full -translate-y-1/2;
   }
 }
 

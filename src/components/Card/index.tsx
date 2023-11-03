@@ -17,7 +17,7 @@ const Card = ({ title, image, description, date, link }: ICard) => {
         />
       </a>
       <h2 className="card-title">
-        <a>{title}</a>
+        <a href={link}>{title}</a>
       </h2>
       <p className="card-description">{description}</p>
       <div className="card-separator">

@@ -1,4 +1,3 @@
-import CardList from "@/components/CardList";
 import { redirect } from "next/navigation";
 
 export default function Home() {

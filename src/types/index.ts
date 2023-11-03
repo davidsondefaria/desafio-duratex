@@ -8,10 +8,21 @@ export interface INavButtons {
   ref: string;
 }
 
-export interface ICard {
+interface IBlog {
   title: string;
   image: string;
-  description: string;
   date: string;
+}
+
+export interface ICard extends IBlog {
+  description: string;
   link?: string;
+}
+
+export interface IArticle extends IBlog {
+  content: any;
+}
+
+export interface DynamicPage {
+  params: { slug: string };
 }
