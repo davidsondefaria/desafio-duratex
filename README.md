@@ -22,7 +22,7 @@ I will be developing this project using the following steps:
 >    4.3 `tailwind-merge` to help merge some tailwind classes.
 > 5. Is not all pixel perfect, since there is some small differences in some components
 > 6. I didn't follow perfect commit semantics
-> 7. I created a video with comparing both original and replica side by side
+> 7. I created a video with comparing both original and replica side by side that can be accessed in [this link](https://drive.google.com/drive/folders/1qo7se2Z2M6IS5ZO3SYx0Sn6wPybsihrw?usp=sharing)
 
 ### Disclaimer
 
