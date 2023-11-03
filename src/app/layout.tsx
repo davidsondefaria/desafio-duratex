@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
+import { Roboto } from "next/font/google";
+import { twMerge } from "tailwind-merge";
 import "./globals.css";
 import Header from "@/components/Header";
+
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="relative top-[70px]">{children}</main>
+        <main className={twMerge(roboto.className, "relative top-[70px]")}>
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-sans: var(--font-roboto);
+}
+
 @layer base {
   body {
     @apply font-sans bg-[#f4f4f5];
@@ -18,7 +22,7 @@
 
 @layer components {
   .container {
-    @apply mx-auto h-auto sm:w-[684px] md:w-[750px] lg:w-[970px] xl:w-[1170px];
+    @apply mx-auto h-auto px-[15px] sm:w-[684px] md:w-[750px] lg:w-[970px] xl:w-[1170px];
   }
 
   .header-wrapper {
@@ -68,13 +72,13 @@
     @apply block h-[40px] my-0 mx-auto;
   }
   .header-menu-mobile .search-field input {
-    @apply w-full relative h-[40px] font-sans placeholder-goldDecor bg-[#383637] mb-[10px] py-0 pr-[35px] pl-[10px];
+    @apply w-full relative h-[40px] placeholder-goldDecor bg-[#383637] mb-[10px] py-0 pr-[35px] pl-[10px];
   }
   .header-menu-mobile .search-field button {
     @apply absolute w-[35px] h-[40px] right-0;
   }
   .header-menu-mobile .header-menu-option {
-    @apply font-sans text-base py-[2px] px-[5px];
+    @apply text-base py-[2px] px-[5px];
   }
 
   /* Card section */
@@ -88,10 +92,10 @@
     @apply p-[20px] bg-white border-gray-200 shadow overflow-hidden relative;
   }
   .card .card-title {
-    @apply font-sans text-xl text-[#292728] font-bold my-2 py-2;
+    @apply text-xl text-[#292728] font-bold my-2 py-2;
   }
   .card .card-description {
-    @apply font-sans font-normal text-base text-[#595959] mb-2;
+    @apply font-normal text-base text-[#595959] mb-2;
     letter-spacing: 1px;
   }
   .card .card-separator {
@@ -108,7 +112,7 @@
 
   /* Blog view section */
   .blog {
-    @apply block lg:flex lg:flex-row mx-[15px];
+    @apply block lg:flex lg:flex-row;
   }
   .blog article {
     @apply relative block 
@@ -121,19 +125,19 @@
   }
   .blog .blog-post h1 {
     @apply my-[0.3em] py-[0.3em] 
-      font-sans text-[28px] leading-[33.6px] font-medium;
+      text-[28px] leading-[33.6px] font-medium;
     color: #292728;
   }
   .blog p {
     @apply mb-[0.5em] py-[0.4em]
-      font-sans text-[#595959] font-normal leading-normal 
+      text-[#595959] font-normal leading-normal 
       tracking-[1px] text-[16px];
   }
   .blog .blog-post a {
     @apply text-[#00708a] font-bold;
   }
   .blog .blog-post blockquote {
-    @apply font-sans text-[#595959] font-normal leading-normal 
+    @apply text-[#595959] font-normal leading-normal 
       tracking-[1px] text-[16px]
       py-[10px] px-[20px] mb-[20px]
       border-l-[5px] border-solid border-[#eee];
@@ -145,7 +149,7 @@
     @apply mb-[30px];
   }
   .blog aside h5 {
-    @apply font-sans font-medium text-[18.2px] text-[#00708a] pt-[6px];
+    @apply font-medium text-[18.2px] text-[#00708a] pt-[6px];
   }
   .blog aside .crop-image {
     @apply relative block overflow-hidden 

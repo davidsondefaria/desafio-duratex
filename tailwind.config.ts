@@ -24,7 +24,7 @@ const config: Config = {
         blackDecor: "#292728",
       },
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
+        sans: ["var(--font-roboto)"],
       },
     },
   },
